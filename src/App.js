@@ -6,8 +6,8 @@ import './App.css';
 import Form from './form.js';
 import Artist from './artistpage'
 import UL from './List.js'
+import Saved from './Saved.js'
 
-// artist:"Joe", date:"11,11, 2017", venue:"Danforth Music Hall"
 
 class App extends Component {
   constructor(){
@@ -57,9 +57,8 @@ class App extends Component {
           <div>
             <nav>
               <Link to="/">Home</Link>
-              <Link to="/search">Search</Link>
-              <Link to="/artistList"> Upcoming Shows</Link>
-              {/* <Form artists={this.state.artists} /> */}
+              <Link to="/search">  Search</Link>
+              <Link to="/artistList">  Upcoming Shows</Link>
             </nav>
 
 
@@ -71,7 +70,7 @@ class App extends Component {
               <Route exact path='/search' render={({match})=>
               <Form artists = {this.state.artists} />}
               />
-
+              
             </Switch>
           </div>
         </Router>

@@ -7,9 +7,9 @@ class UL extends Component {
         
         return(
         <div>
-            <ul className="list-group">
+            <div className="list-group">
                 {this.props.artists}
-            </ul>
+            </div>
         </div>
         )
     }

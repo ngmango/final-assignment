@@ -33,38 +33,6 @@ connection.on("open", ()=> {
 })
 
 
-app.post('/newuser', (req, res) => {
-    
-        const newUser = users({
-            name: req.body.name,
-            password: req.body.password,
-            
-        });
-        
-        newUser.save()
-            .then(saveitem => {
-                console.log(saveitem);
-                res.send(saveitem);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    })
-
-
-app.get('/getall',(req,res)=>{
-    
-    users.find({})
-    .then(getall => {
-        console.log(getall);
-        res.json(getall)
-    })
-    .catch(error => {
-        console.log(error);
-    })
-
-})
-
 app.get('/scraperotatethis', (req, res) => {
     request('http://www.rotate.com/tickets/', (err, resp, body) => {
         let meta = [];    
@@ -85,7 +53,7 @@ app.get('/scraperotatethis', (req, res) => {
                     date:date,
                 })
             })
-        console.log(meta[0])
+        // console.log(meta[0])
         }
         res.json(meta);
     })
