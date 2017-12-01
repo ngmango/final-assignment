@@ -9,19 +9,21 @@ class Form extends React.Component {
         super()
         this.state = ({
             artist:'',
-            artistFound: [],
+            artistArray:[],
+            artistFound:[],
             
         })
     
     this.artistHandler = this.artistHandler.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)    
     this.search = this.search.bind(this)
+    this.saveArtist = this.saveArtist.bind(this)
     }
 
    
 
     artistHandler(e){
-        e.preventDefault()
+        e.preventDefault();
         this.setState({
             artist:e.target.value.toLowerCase()
         })
@@ -44,6 +46,14 @@ class Form extends React.Component {
         }
     }
 
+    saveArtist(e){
+        e.preventDefault();
+        let newArtistArray = Array.from(this.state.artistArray)
+        newArtistArray.push(this.state.artist)
+        this.setState({
+            artistArray:newArtistArray
+        })
+    }
     
     handleSubmit(e){
         e.preventDefault();
@@ -69,7 +79,6 @@ class Form extends React.Component {
                         </span>
                     </div>
                 </form>
-
             <UL artists={artistList}/>
             </div>
         )

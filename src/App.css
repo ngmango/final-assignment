@@ -3,7 +3,63 @@
 }
 
 body{
-  background-color: lightgray;
+  background-color: #482092;
+  background: linear-gradient(left, rgb(127, 201, 250), rgb(52, 130, 226));
+  background-repeat:no-repeat;
+  height:350em;
+}
+
+h1{
+  font-size:3.5em;
+  color:rgb(10, 0, 24);
+  padding-top:7%;
+  padding-left:1.2%;
+}
+
+h2{
+  font-size:0.6em;
+  color:chartreuse;
+  padding-bottom:2.3%;
+}
+
+h3{
+  display:inline-block;
+}
+
+#h31{
+  position:relative;
+  right:25%;
+}
+
+#h32{
+  position:relative;
+  right:0.5%;
+}
+
+#h33{
+  position:relative;
+  left:22%;
+}
+
+nav{
+  height:100%;
+}
+
+.headerRight{
+  right:8%;
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-end;
+  
+}
+
+.headerBox{
+  background-image:url('./images/banner.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  width:100%;
+  
 }
 
 .App-logo {
@@ -33,5 +89,36 @@ body{
 
 .listItems {
   display:inline-block;
-  padding-left:5%,
+  margin-bottom:0.2%;
+}
+
+#listItem1{
+  position:relative;
+  right:28%
+}
+
+#listItem2{
+  position:absolute;
+  left:47.5%;
+}
+
+#listItem3{
+  position:absolute;
+  left:72%;
+}
+
+.tableau{
+  display:flex;
+  justify-content: space-around;
+  flex-direction:column
+}
+
+#width{
+  width:100%
+}
+
+#p1{
+  position:absolute;
+  top:40%;
+  left: 5%
 }

@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // import request from 'request';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import {Helmet} from "react-helmet";
 import './App.css';
 import Form from './form.js';
 import Artist from './artistpage'
 import UL from './List.js'
-import Saved from './Saved.js'
+import Home from './Home.js'
 
 
 class App extends Component {
@@ -52,18 +53,30 @@ class App extends Component {
     return (
       
       <div className="App">
-      
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ToronShow</title>
+      </Helmet>
+
         <Router>
-          <div>
+          <div id="width">
+            <div className='headerBox'>
+              <div className='headerRight'>
+                <h1 className= "listItems"> ToronShow </h1>
+                <h2 className= "listItems"> (name W.I.P) </h2>
+              </div>
+            </div>
             <nav>
               <Link to="/">Home</Link>
-              <Link to="/search">  Search</Link>
-              <Link to="/artistList">  Upcoming Shows</Link>
+              <Link to="/search"> Search</Link>
+              <Link to="/artistList"> Upcoming Shows</Link>
             </nav>
-
 
             <Switch>
                 
+
+              <Route exact path='/' render={({match})=>
+              <Home />} />
               <Route exact path='/artistList' render={({match})=>
               <UL artists = {artistList} />}
               />
