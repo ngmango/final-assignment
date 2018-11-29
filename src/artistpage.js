@@ -1,16 +1,14 @@
 import React, {Component} from 'react'
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+// import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import './App.css'
 
 class Artist extends Component{
-  constructor(){
-    super()
-  }
+
   render(){
     return (
       <div className="list-group-item">
 
-          <a href={`https://www.google.ca/search?q= + 
+          <a href={`https://www.google.ca/search?btnI=1&q= + 
             ${this.props.artists.artist.toLowerCase()} 
             +Artist +Music`} className="listItems" 
             id="listItem1">
@@ -25,7 +23,7 @@ class Artist extends Component{
             {this.props.artists.date} 
           </a>
 
-          <a href={`https://www.google.ca/search?q= + 
+          <a href={`https://www.google.ca/search?btnI=1&q= + 
             ${this.props.artists.venue} +Venue +Toronto`} 
             className="listItems"
             id="listItem3">
